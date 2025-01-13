@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BaseScene.unity
+    guid: 1a0c5995d1bbd4bad862c8391ec362e3
+  - enabled: 1
+    path: Assets/Scenes/Harkortstrasse.unity
+    guid: d05dc36f74cb09047b690f0aab3ec7cc
+  m_configObjects:
+    AR Foundation RemoteARFoundationRemoteLoaderSettings: {fileID: 11400000, guid: a330306f81be9408da9636faae64b001, type: 2}
+    AR Foundation RemoteARFoundationRemoteSessionRecordsData: {fileID: 11400000, guid: 439a426cc8986492c9c3ec7d87c127d1, type: 2}
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c81c7f47372a0b345ac031eb3dbb4b96, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: a67baf74d8dc93b4c8f0a19bd1b34553, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: e13de540b9dfb5d42a3082c2f47435ef, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4e3981a22634d6443a6bd6c82ea4de70, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: f90a33efe63fad346a6ab6995ea7956d, type: 2}
+  m_UseUCBPForAssetBundles: 0

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Annotation
+  - Delete
+  - lb_bird
+  - Baggerschaufel
+  - Bagger
+  - Minibagger
+  - lb_groundTarget
+  - newCam
+  - FlyCam
+  - Feuerwehr
+  - lb_perchTarget
+  - Mobilkran
+  - Dampfwalze
+  - Planierraupe
+  - NP
+  - CityGen3D
+  - Camera
+  - Betonmischer
+  - ARModeDisabled
+  - Toggle
+  - Locked
+  - AnnotationSphere
+  - ScreenshotCam
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Annotation
+  - 
+  - 
+  - 
+  - Landscape
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
