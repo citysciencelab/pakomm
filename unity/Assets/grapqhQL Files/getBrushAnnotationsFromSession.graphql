@@ -1,0 +1,47 @@
+query mySession($eventNr: Int!) {
+  queryEventSession( filter: { number: { eq: $eventNr }}) {
+	brushAnnotation {
+      id
+      modified_at
+	  created_at
+      pX
+      pY
+      pZ
+      prefabName
+      rX
+      rY
+      rZ
+      sX
+      sY
+      sZ
+      brushStrokeWidth
+	  brushColor {
+        a
+        b
+        g
+        r
+      }
+      annotation {
+        content
+        created_at
+        downvotes
+        id
+        upvotes
+      }
+      ribbons (order: {asc: number}) {
+	    number
+        pos {
+          x
+          y
+          z
+        }
+        rot {
+          w
+          x
+          y
+          z
+        }
+      }
+     }
+  }
+}

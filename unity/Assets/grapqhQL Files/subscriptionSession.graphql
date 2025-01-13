@@ -1,0 +1,9 @@
+subscription myone{
+  queryEventSession( filter: { number: { eq: 46 }}) {
+	number
+	name
+    objects{
+      id
+    }
+  }
+}

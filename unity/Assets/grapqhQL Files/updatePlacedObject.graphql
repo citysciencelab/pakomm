@@ -1,0 +1,16 @@
+mutation updObject($id: [ID!], $pX: Float, $pY: Float, $pZ: Float, $rX: Float, $rY: Float, $rZ: Float, $sX: Float, $sY: Float, $sZ: Float) {
+  updatePlacedObject(input: {filter: {id: $id}, set: {pX: $pX, pY: $pY, pZ: $pZ, rX: $rX, rY: $rY, rZ: $rZ, sX: $sX, sY: $sY, sZ: $sZ}}){
+   placedObject {
+      pX
+      pY
+      pZ
+      rX
+      rY
+      rZ
+      sX
+      sY
+      sZ
+    }
+  }
+}
+

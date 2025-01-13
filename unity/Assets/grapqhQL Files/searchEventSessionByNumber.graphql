@@ -1,0 +1,8 @@
+query searchEventSessionByNumber ($value : Int) {
+  queryEventSession(filter: {number: {eq: $value}}) {
+    name
+    number
+    created_at
+    deleted
+  }
+}

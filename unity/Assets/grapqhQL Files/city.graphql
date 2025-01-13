@@ -1,0 +1,8 @@
+query ($names: String!) {
+    queryCity(filter: {name: {eq: $names}}) {
+      name
+      lat
+      lng
+    }
+}
+

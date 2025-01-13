@@ -1,0 +1,12 @@
+mutation updateAnnotation($id: [ID!], $upvotes :  Int , $downvotes:  Int) {
+  updateAnnotation(input: {set: {upvotes: $upvotes, downvotes: $downvotes}, filter: {id: $id}}){
+  annotation {
+      downvotes
+      id
+      upvotes
+    }
+}
+}
+
+
+

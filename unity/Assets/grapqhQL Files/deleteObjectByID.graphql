@@ -1,0 +1,5 @@
+mutation deleteObject($id: [ID!]) {
+  deletePlacedObject(filter: {id: $id}) {
+    msg
+  }
+}

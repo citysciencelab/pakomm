@@ -1,0 +1,16 @@
+mutation addAnnotation($id: [ID!], $content: String, $voteUp: Int, $voteDown: Int, $created_at: DateTime){
+  updatePlacedObject(input: {set: {annotation: {content: $content, created_at: $created_at, downvotes: $voteDown, upvotes: $voteUp}}, filter: {id: $id}}){
+	placedObject {
+      id
+      prefabName
+      annotation {
+        content
+        created_at
+        id
+        upvotes
+        downvotes
+      }
+    }
+  }
+}
+

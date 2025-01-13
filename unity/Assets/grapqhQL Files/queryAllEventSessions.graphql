@@ -1,0 +1,10 @@
+query queryAllEventSessions {
+  queryEventSession (order: {desc: number}) {
+    name
+    number
+    created_at
+    deleted
+	  locked
+    screenshotPath
+  }
+}

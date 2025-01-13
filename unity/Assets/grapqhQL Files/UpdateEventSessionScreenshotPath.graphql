@@ -1,0 +1,11 @@
+mutation UpdateEventSessionScreenshotPath ($number: Int!, $screenshotPath: String){
+ updateEventSession(input: {filter: {number: {eq: $number}}, set: {screenshotPath: $screenshotPath}}){
+   eventSession{
+		number
+		screenshotPath
+	}
+ }
+}
+
+
+

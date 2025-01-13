@@ -1,0 +1,24 @@
+mutation addBrush($eventSession: Int!, $pX: Float, $pY: Float, $pZ: Float, $rX: Float, $rY: Float, $rZ: Float, $sX: Float, $sY: Float, $sZ: Float, $prefabName: String,  $created_at: DateTime , $r: Float, $g: Float, $b: Float, $a: Float, $brushStrokeWidth: Float, $ribbons : [RibbonPointRef] ){
+  addBrushAnnotation(input: { brushColor: {a: $a, b: $b, g: $g, r: $r}, pX: $pX, pY: $pY, pZ: $pZ, rX: $rX, rY: $rY, rZ: $rZ, sX: $sX, sY: $sY, sZ: $sZ, brushStrokeWidth: $brushStrokeWidth, prefabName: $prefabName,  ribbons: $ribbons , eventSession: {number: $eventSession},  created_at: $created_at, modified_at: $created_at }) {
+    brushAnnotation {
+      id
+	  eventSession {
+		number
+		}
+		ribbons (order: {asc: number}) {
+	    number
+        pos {
+          x
+          y
+          z
+        }
+        rot {
+          w
+          x
+          y
+          z
+        }
+      }
+    }
+  }
+}

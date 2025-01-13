@@ -1,0 +1,11 @@
+mutation deleteSessionByNumber ($number: Int!){
+ updateEventSession(input: {filter: {number: {eq: $number}}, set: {deleted: true}}){
+   eventSession{
+		number
+    deleted
+	}
+ }
+}
+
+
+

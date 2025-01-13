@@ -1,0 +1,7 @@
+mutation addObj($eventSession: Int!, $pX: Float, $pY: Float, $pZ: Float, $rX: Float, $rY: Float, $rZ: Float, $sX: Float, $sY: Float, $sZ: Float, $prefabName: String,  $created_at: DateTime ){
+  addPlacedObject(input: {pX: $pX, pY: $pY, pZ: $pZ, rX: $rX, rY: $rY, rZ: $rZ, sX: $sX, sY: $sY, sZ: $sZ, prefabName: $prefabName, eventSession: {number: $eventSession},  created_at: $created_at}) {
+    placedObject{
+		id
+	}
+  }
+}

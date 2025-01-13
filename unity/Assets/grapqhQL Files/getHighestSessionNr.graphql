@@ -1,0 +1,6 @@
+query getHighestSessionNr {
+  queryEventSession(filter: {}, first: 1, order: {desc: number}) {
+    number
+    name
+  }
+}

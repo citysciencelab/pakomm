@@ -1,0 +1,27 @@
+query SessionOne($eventNr: Int!) {
+  queryEventSession( filter: { number: { eq: $eventNr }}) {
+	number
+	name
+	locked
+    objects {
+      id
+      pX
+      pY
+      pZ
+	  rX
+	  rY
+	  rZ
+	  sX
+	  sY
+	  sZ
+      prefabName
+      annotation {
+        content
+        created_at
+        downvotes
+        id
+        upvotes
+      }
+    }
+  }
+}

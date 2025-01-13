@@ -1,0 +1,7 @@
+mutation addSession($number: Int!, $name: String, $created_at: DateTime, $deleted: Boolean, $locked: Boolean){
+  addEventSession(input: {number: $number, name: $name, created_at: $created_at, deleted: $deleted, locked: $locked}){
+  eventSession {
+      number
+    }
+  }
+}

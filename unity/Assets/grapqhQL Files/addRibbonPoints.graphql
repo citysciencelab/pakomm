@@ -1,0 +1,21 @@
+mutation MyMutation($input: [AddRibbonPointInput!]!) {
+  addRibbonPoint(input: $input) {
+      brushAnnotation {
+        id
+        ribbons {
+          position {
+            x
+            y
+            z
+          }
+          rotation {
+            x
+            y
+            z
+            w
+          }
+        }
+      
+    }
+  }
+  }

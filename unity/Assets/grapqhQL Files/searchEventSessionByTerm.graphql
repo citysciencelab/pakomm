@@ -1,0 +1,8 @@
+query searchEventSessionByTerm ($term : String) {
+  queryEventSession(filter: {name: {anyofterms: $term}}) {
+   name
+    number
+    created_at
+    deleted
+  }
+}

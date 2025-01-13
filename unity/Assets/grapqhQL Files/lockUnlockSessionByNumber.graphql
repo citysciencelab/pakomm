@@ -1,0 +1,11 @@
+mutation lockUnlockSessionByNumber ($number: Int!, $locked: Boolean){
+ updateEventSession(input: {filter: {number: {eq: $number}}, set: {locked: $locked}}){
+   eventSession{
+		number
+		locked
+	}
+ }
+}
+
+
+

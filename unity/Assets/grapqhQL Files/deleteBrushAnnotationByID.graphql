@@ -1,0 +1,5 @@
+mutation deleteBrushAnnotationByID ($id: [ID!]) {
+  deleteBrushAnnotation(filter: {id: $id}) {
+    msg
+  }
+}

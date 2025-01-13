@@ -1,0 +1,6 @@
+query getHighestLogOperationNumber {
+  queryLogOperation(filter: {}, first: 1, order: {desc: number}) {
+    number
+  }
+}
+

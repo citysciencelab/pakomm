@@ -1,0 +1,108 @@
+type PlacedObject @withSubscription {
+  id:ID!
+  created_at: DateTime
+  pX: Float
+  pY: Float
+  pZ: Float
+  rX: Float
+  rY: Float
+  rZ: Float
+  sX: Float
+  sY: Float
+  sZ: Float
+	prefabName: String
+	eventSession: EventSession
+  modified_at: DateTime
+  annotation: [Annotation] @hasInverse(field:placedobject)
+  
+}
+
+type LogOperation {
+  id:ID!
+  number:Int
+  created_at: DateTime
+  eventSession: EventSession
+  content: String
+  objectid: String
+  pX: Float
+  pY: Float
+  pZ: Float
+  rX: Float
+  rY: Float
+  rZ: Float
+  sX: Float
+  sY: Float
+  sZ: Float
+}
+
+type EventSession @withSubscription {
+	number: Int! @id
+  name: String @search
+  created_at: DateTime
+  objects: [PlacedObject] @hasInverse(field: eventSession)
+  brushAnnotation: [BrushAnnotation] @hasInverse(field:eventSession)
+  logOperation: [LogOperation] @hasInverse(field: eventSession)
+  deleted: Boolean
+  locked: Boolean
+}
+
+type BrushAnnotation {
+  id:ID!
+  created_at: DateTime 
+  pX: Float
+  pY: Float
+  pZ: Float
+  rX: Float
+  rY: Float
+  rZ: Float
+  sX: Float
+  sY: Float
+  sZ: Float
+	prefabName: String
+  eventSession: EventSession
+  modified_at: DateTime
+  brushStrokeWidth: Float
+  brushColor : BrushColor
+  ribbons: [RibbonPoint] 
+  annotation: [Annotation] @hasInverse(field: brushAnnotation)
+}
+
+type RibbonPoint {
+
+  id: ID!
+  number:Int
+  pos: PositionFormat
+  rot: RotationFormat
+  
+  
+}
+
+type BrushColor {
+  r: Float
+  g: Float
+  b: Float
+  a: Float
+}
+
+type PositionFormat {
+  x: Float
+  y: Float
+  z: Float
+}
+
+type RotationFormat {
+  w: Float
+  x: Float
+  y: Float
+  z: Float
+}
+
+type Annotation @withSubscription {
+  id: ID!
+  content:String
+  created_at: DateTime
+  placedobject:  PlacedObject @hasInverse(field: annotation)
+  brushAnnotation: BrushAnnotation @hasInverse (field: annotation)
+  upvotes:Int
+  downvotes:Int
+}
