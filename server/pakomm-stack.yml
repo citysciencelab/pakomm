@@ -1,0 +1,35 @@
+# version: "3.5"
+
+services:
+
+  zero:
+    image: dgraph/dgraph:v23.1.1
+    networks:
+      - pakomm-backend
+    restart: on-failure
+    volumes:
+      - dgraph-volume:/dgraph
+    ports:
+      - 5080:5080
+      - 6080:6080
+    command: dgraph zero --my=zero:5080 
+
+  alpha1:
+    image: dgraph/dgraph:v23.1.1
+    networks:
+      - pakomm-backend
+    hostname: dgraphalpha
+    restart: on-failure
+    volumes:
+      - dgraph-volume:/dgraph
+    ports:
+      - 8080:8080
+      - 9080:9080
+    command: dgraph alpha --my=alpha1:7080 --zero=zero:5080 --security whitelist=0.0.0.0/0;token="xxx"
+
+
+networks:
+  pakomm-backend:
+
+volumes:
+  dgraph-volume:
